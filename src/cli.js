@@ -18,4 +18,4 @@ if (program.defenderApiKey && program.defenderSecret) {
   relayer = new Relayer({apiKey: program.defenderApiKey, apiSecret: program.defenderSecret});
 }
 
-reward(relayer, program.network)
+upkeep(relayer, program.network)
