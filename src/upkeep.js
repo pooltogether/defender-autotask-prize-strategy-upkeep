@@ -14,7 +14,7 @@ exports.upkeep = async function (relayer, network) {
 
   if (upkeepNeeded) {
     const unsignedTx = await prizeStrategyUpkeep.populateTransaction.performUpkeep([])    
-    const gasLimit = (await prizeStrategyUpkeep.populateTransaction.performUpkeep([])).toNumber()
+    const gasLimit = (await prizeStrategyUpkeep.estimateGas.performUpkeep([])).toNumber()
     console.log(`performUpkeep(). Gas limit: ${gasLimit.toString()}`)
     await relayer.sendTransaction({
       to: unsignedTx.to,
