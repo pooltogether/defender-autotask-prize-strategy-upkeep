@@ -22,6 +22,7 @@ async function run() {
   if (process.env.POLYGON_AUTOTASK_ID) {
     await updateAutotask(process.env.POLYGON_AUTOTASK_ID, './dist/polygon-bundle.js')
   }
+  console.log("done!")
 }
 
 run()

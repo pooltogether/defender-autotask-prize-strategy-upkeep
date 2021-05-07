@@ -631,11 +631,6 @@
   resolved "https://registry.yarnpkg.com/@pooltogether/fixed-point/-/fixed-point-1.0.0-beta.2.tgz#d76a1e77f21833e9b680296d65526b0ffd7415d7"
   integrity sha512-aUw4R0Z2oM0AK3W4LIXyBaojTOzRRbhLDHX0egeuvxfjy4gBb6X66v81gI7Wngg/7O0y9QL/B8jWkUnAFzhTig==
 
-"@pooltogether/operations-contracts@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@pooltogether/operations-contracts/-/operations-contracts-0.1.0.tgz#e72a3f1a372941adb84eb757522df26ff0255f26"
-  integrity sha512-8p1/DhMk7hR9AOjCvs9JkK/7sWdovTmjihyU22GPpdcvnGBs+g5KVIiTZSw4jWZaBH1bP+gppPbU9tQMZDWRYw==
-
 "@pooltogether/pooltogether-contracts@3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@pooltogether/pooltogether-contracts/-/pooltogether-contracts-3.1.0.tgz#b66ebd13c721129754313e7ab56dc5460aef3d3d"
@@ -647,6 +642,11 @@
     "@pooltogether/uniform-random-number" "1.0.0-beta.1"
     deploy-eip-1820 "1.0.0"
     sortition-sum-tree-factory "0.1.0"
+
+"@pooltogether/pooltogether-prizestrategy-upkeep@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@pooltogether/pooltogether-prizestrategy-upkeep/-/pooltogether-prizestrategy-upkeep-1.0.0.tgz#4f46b71092109e9b323d55f8d2f0e38e6c38dbcb"
+  integrity sha512-8WlmeSKdTjiI0k7BH+qYN4PCRSFNPQUlcBcBTSG/IxOPajCnaEILQrkVflAqQIiVhg3hZkjL4JrVGQupUuIytg==
 
 "@pooltogether/pooltogether-rng-contracts@1.0.0":
   version "1.0.0"

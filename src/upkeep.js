@@ -1,5 +1,5 @@
 const ethers = require("ethers")
-const PrizeStrategyUpkeepABI = require("@pooltogether/operations-contracts/abis/PrizeStrategyUpkeep.json")
+const PrizeStrategyUpkeepABI = require("@pooltogether/pooltogether-prizestrategy-upkeep/abis/PrizeStrategyUpkeep.json")
 const { getPrizeStrategyUpkeepAddress } = require('./getPrizeStrategyUpkeepAddress')
 
 exports.upkeep = async function (relayer, network) {
