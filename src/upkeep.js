@@ -10,11 +10,14 @@ exports.upkeep = async function (relayer, network) {
   
   const prizeStrategyUpkeep = new ethers.Contract(prizeStrategyUpkeepAddress, PrizeStrategyUpkeepABI, provider)
 
+  
   const { upkeepNeeded, performData } = await prizeStrategyUpkeep.checkUpkeep([])
+  console.log("checkUpkeep() result ", upkeepNeeded)
 
   if (upkeepNeeded) {
+    console.log("performing upkeep on ", prizeStrategyUpkeep.address)
     const unsignedTx = await prizeStrategyUpkeep.populateTransaction.performUpkeep([])    
-    const gasLimit = (await prizeStrategyUpkeep.estimateGas.performUpkeep([])).toNumber()
+    const gasLimit = ((await prizeStrategyUpkeep.estimateGas.performUpkeep([])).toNumber() * 2) 
     console.log(`performUpkeep(). Gas limit: ${gasLimit.toString()}`)
     await relayer.sendTransaction({
       to: unsignedTx.to,
