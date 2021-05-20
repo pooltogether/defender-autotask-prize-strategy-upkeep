@@ -3,6 +3,8 @@ export DEFENDER_RELAYER_SECRET=
 export INFURA_API_KEY=
 export DEFENDER_TEAM_API_KEY=
 export DEFENDER_TEAM_SECRET_KEY=
+
+# Autotask ID's can be found clicking on "edit code" for the task in the Defender GUI
 export MAINNET_AUTOTASK_ID=
 export RINKEBY_AUTOTASK_ID=
 export POLYGON_AUTOTASK_ID=
