@@ -643,10 +643,10 @@
     deploy-eip-1820 "1.0.0"
     sortition-sum-tree-factory "0.1.0"
 
-"@pooltogether/pooltogether-prizestrategy-upkeep@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@pooltogether/pooltogether-prizestrategy-upkeep/-/pooltogether-prizestrategy-upkeep-1.0.2.tgz#bb06f0ad8e61430345b6bf840baf2c6eac8fb7b9"
-  integrity sha512-c3lOZtO5ZpohPPvXBcy6xZhfsyeKJNwReWkflyLep7AUtl0Q88d7jWKFfBcnky/+l1DMRNT+6UWrtWCV+b3LrQ==
+"@pooltogether/pooltogether-prizestrategy-upkeep@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@pooltogether/pooltogether-prizestrategy-upkeep/-/pooltogether-prizestrategy-upkeep-1.0.4.tgz#177b729e38c63ba0064cacf654ba6c61dc297b88"
+  integrity sha512-2obx3FT3tASj4jnslJlQyv4sdDaAR0KKtuSt3i54XQK7oSMTATTh7T/+y+SNimoM6CBY6deKM6rD+EJ7L3DH/w==
 
 "@pooltogether/pooltogether-rng-contracts@1.0.0":
   version "1.0.0"
@@ -2559,14 +2559,24 @@ defender-base-client@1.5.1:
     lodash "^4.17.19"
     node-fetch "^2.6.0"
 
-defender-relay-client@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/defender-relay-client/-/defender-relay-client-0.2.4.tgz#8e93dee73326a1a8a5c8b062ae9dbfe5b24273eb"
-  integrity sha512-qRv7bHQ1z0UMCF0mB/fv4C8VbGuDnz7IphUJlbSzGPjWbZ5hC+3SPG4nEaT5Zi8zuDa/pYNqXqAtdkXoQ2cCcw==
+defender-base-client@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/defender-base-client/-/defender-base-client-1.7.0.tgz#258033cde58ed7f256d721f77b7b30e49d4d680b"
+  integrity sha512-snNyKtxUZn8y0JewVAQDJUam1qESFnkJiOUNtutB07OzldUoA7R/n/xuu5LyM3z4ScvoXu6xeVe67xs2H60KKg==
   dependencies:
     amazon-cognito-identity-js "^4.3.3"
     axios "^0.19.2"
-    find-up "^4.1.0"
+    lodash "^4.17.19"
+    node-fetch "^2.6.0"
+
+defender-relay-client@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/defender-relay-client/-/defender-relay-client-1.8.0.tgz#0e81b8667a600c03cb0b18053e70a503e3c04512"
+  integrity sha512-Ed37zcKCnNkyTE3Y2Re8c8eBP0ufU2jng8CyQ+5KPSGZqs3RVXZmJPLO4ADDWQtnE2ARb6Z3cpMmVm5Exwykog==
+  dependencies:
+    amazon-cognito-identity-js "^4.3.3"
+    axios "^0.19.2"
+    defender-base-client "^1.7.0"
     lodash "^4.17.19"
     node-fetch "^2.6.0"
 
@@ -3561,14 +3571,6 @@ find-up@^2.1.0:
   integrity sha1-RdG35QbHF93UgndaK3eSCjwMV6c=
   dependencies:
     locate-path "^2.0.0"
-
-find-up@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/find-up/-/find-up-4.1.0.tgz#97afe7d6cdc0bc5928584b7c8d7b16e8a9aa5d19"
-  integrity sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==
-  dependencies:
-    locate-path "^5.0.0"
-    path-exists "^4.0.0"
 
 flat@^4.1.0:
   version "4.1.0"
@@ -4694,13 +4696,6 @@ locate-path@^3.0.0:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
 
-locate-path@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-5.0.0.tgz#1afba396afd676a6d42504d0a67a3a7eb9f62aa0"
-  integrity sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==
-  dependencies:
-    p-locate "^4.1.0"
-
 lodash@4.17.14:
   version "4.17.14"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
@@ -5293,7 +5288,7 @@ p-limit@^1.1.0:
   dependencies:
     p-try "^1.0.0"
 
-p-limit@^2.0.0, p-limit@^2.2.0:
+p-limit@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-2.3.0.tgz#3dd33c647a214fdfffd835933eb086da0dc21db1"
   integrity sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==
@@ -5313,13 +5308,6 @@ p-locate@^3.0.0:
   integrity sha512-x+12w/To+4GFfgJhBEpiDcLozRJGegY+Ei7/z0tSLkMmxGZNybVMSfWj9aJn8Z5Fc7dBUNJOOVgPv2H7IwulSQ==
   dependencies:
     p-limit "^2.0.0"
-
-p-locate@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/p-locate/-/p-locate-4.1.0.tgz#a3428bb7088b3a60292f66919278b7c297ad4f07"
-  integrity sha512-R79ZZ/0wAxKGu3oYMlz8jy/kbhsNrS7SKZ7PxEHBgJ5+F2mtFW2fK2cOtBh1cHYkQsbzFV7I+EoRKe6Yt0oK7A==
-  dependencies:
-    p-limit "^2.2.0"
 
 p-timeout@^1.1.1:
   version "1.2.1"
@@ -5380,11 +5368,6 @@ path-exists@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-3.0.0.tgz#ce0ebeaa5f78cb18925ea7d810d7b59b010fd515"
   integrity sha1-zg6+ql94yxiSXqfYENe1mwEP1RU=
-
-path-exists@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-4.0.0.tgz#513bdbe2d3b95d7762e8c1137efa195c6c61b5b3"
-  integrity sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==
 
 path-is-absolute@^1.0.0, path-is-absolute@^1.0.1:
   version "1.0.1"
