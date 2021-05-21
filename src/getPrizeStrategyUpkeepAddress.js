@@ -7,7 +7,6 @@ function getPrizeStrategyUpkeepAddress(network) {
     prizeStrategyUpkeepAddress = PrizeStrategyUpkeepRinkeby.address
   } else if(network == 'mainnet'){
     prizeStrategyUpkeepAddress = PrizeStrategyUpkeepMainnet.address
-    console.log("mainnet address!", prizeStrategyUpkeepAddress)
   } 
   else {
     throw new Error(`Unknown network: ${network}`)

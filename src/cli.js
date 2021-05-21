@@ -11,7 +11,7 @@ program
 
 program.parse(process.argv)
 
-console.log(program.opts())
+// console.log(program.opts())
 
 let relayer
 if (program.defenderApiKey && program.defenderSecret) {

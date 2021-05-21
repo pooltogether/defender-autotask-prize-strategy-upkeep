@@ -24,7 +24,7 @@ exports.upkeep = async function (relayer, network) {
 
     // if non-empty array then return
     // this way only gas-speedup transactions will happen and not duplicate transactions
-    if (array.length > 0 || array) {
+    if (array && array.length > 0) {
       console.log("The following transactions are in flight: ")
       txs.forEach(tx => {
         console.log(tx)
@@ -33,7 +33,6 @@ exports.upkeep = async function (relayer, network) {
       console.log("Transactions already in flight - returning early")
       return
     }
-
 
     console.log("calling peformUpkeep() on ", prizeStrategyUpkeep.address)
     const unsignedTx = await prizeStrategyUpkeep.populateTransaction.performUpkeep([])    
