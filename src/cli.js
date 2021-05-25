@@ -11,8 +11,6 @@ program
 
 program.parse(process.argv)
 
-// console.log(program.opts())
-
 let relayer
 if (program.defenderApiKey && program.defenderSecret) {
   relayer = new Relayer({apiKey: program.defenderApiKey, apiSecret: program.defenderSecret});

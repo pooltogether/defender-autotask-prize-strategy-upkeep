@@ -10,7 +10,6 @@ exports.upkeep = async function (relayer, network) {
   
   const prizeStrategyUpkeep = new ethers.Contract(prizeStrategyUpkeepAddress, PrizeStrategyUpkeepABI, provider)
 
-  
   const { upkeepNeeded, performData } = await prizeStrategyUpkeep.checkUpkeep([])
   console.log("checkUpkeep() result ", upkeepNeeded)
 
@@ -24,7 +23,7 @@ exports.upkeep = async function (relayer, network) {
 
     // if non-empty array then return
     // this way only gas-speedup transactions will happen and not duplicate transactions
-    if (array && array.length > 0) {
+    if (txs && txs.length > 0) {
       console.log("The following transactions are in flight: ")
       txs.forEach(tx => {
         console.log(tx)
