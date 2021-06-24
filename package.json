@@ -9,7 +9,7 @@
     "@ethersproject/abstract-provider": "^5.1.0",
     "@ethersproject/abstract-signer": "^5.1.0",
     "@pooltogether/current-pool-data": "3.4.7",
-    "@pooltogether/pooltogether-prizestrategy-upkeep": "^1.0.4",
+    "@pooltogether/pooltogether-prizestrategy-upkeep": "^1.0.5",
     "@pooltogether/pooltogether-contracts": "3.1.0",
     "commander": "^6.1.0",
     "defender-autotask-client": "^1.5.1",

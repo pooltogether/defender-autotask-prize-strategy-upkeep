@@ -11,6 +11,7 @@ exports.upkeep = async function (relayer, network) {
   const prizeStrategyUpkeep = new ethers.Contract(prizeStrategyUpkeepAddress, PrizeStrategyUpkeepABI, provider)
 
   const { upkeepNeeded, performData } = await prizeStrategyUpkeep.checkUpkeep([])
+  console.log("checking if upkeep required on ", prizeStrategyUpkeep.address)
   console.log("checkUpkeep() result ", upkeepNeeded)
 
   if (upkeepNeeded) {
