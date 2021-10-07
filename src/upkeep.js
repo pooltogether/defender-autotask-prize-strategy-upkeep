@@ -42,7 +42,7 @@ exports.upkeep = async function (relayer, network) {
       to: unsignedTx.to,
       data: unsignedTx.data,
       gasLimit,
-      speed: 'fast'
+      speed: 'safeLow'
     })
 
   }
