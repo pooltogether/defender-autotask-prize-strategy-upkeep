@@ -7,7 +7,7 @@ exports.upkeep = async function (relayer, network) {
   const prizeStrategyUpkeepAddress = getPrizeStrategyUpkeepAddress(network)
 
   const provider = new ethers.providers.InfuraProvider(network, process.env.INFURA_API_KEY)
-  
+
   const prizeStrategyUpkeep = new ethers.Contract(prizeStrategyUpkeepAddress, PrizeStrategyUpkeepABI, provider)
 
   const { upkeepNeeded, performData } = await prizeStrategyUpkeep.checkUpkeep([])
@@ -17,7 +17,7 @@ exports.upkeep = async function (relayer, network) {
   if (upkeepNeeded) {
     // check if the same tranasction still in flight
     const txs = await relayer.list({
-      since: new Date(Date.now() - 3600 * 1000),// 
+      since: new Date(Date.now() - 3600 * 1000),//
       status: 'pending', // can be 'pending', 'mined', or 'failed'
       limit: 5, // newest txs will be returned first
     })
@@ -35,15 +35,15 @@ exports.upkeep = async function (relayer, network) {
     }
 
     console.log("calling peformUpkeep() on ", prizeStrategyUpkeep.address)
-    const unsignedTx = await prizeStrategyUpkeep.populateTransaction.performUpkeep([])    
-    const gasLimit = ((await prizeStrategyUpkeep.estimateGas.performUpkeep([])).toNumber() * 2) 
+    const unsignedTx = await prizeStrategyUpkeep.populateTransaction.performUpkeep([])
+    const gasLimit = ((await prizeStrategyUpkeep.estimateGas.performUpkeep([])).toNumber() * 2)
     console.log(`performUpkeep(). Gas limit: ${gasLimit.toString()}`)
     await relayer.sendTransaction({
       to: unsignedTx.to,
       data: unsignedTx.data,
       gasLimit,
-      speed: 'safeLow'
-    })
+      speed: 'average',
+    });
 
   }
 }
